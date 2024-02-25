@@ -10,8 +10,8 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // using routes
-app.use("/products", require("./routes/products"));
 app.use("/", require("./routes/products"));
+app.use("/products", require("./routes/products"));
 
 // starting the server
 app.listen(3000, function () {
